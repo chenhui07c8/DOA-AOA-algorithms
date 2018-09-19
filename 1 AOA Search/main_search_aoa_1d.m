@@ -5,7 +5,7 @@ close all;
 clear all;
 clc;
 %% 1d phase difference calculation.
-s1 = [0.8839 0];    % sensor 1 location in a 2-d plane
+s1 = [0.8839 0];    % sensor 1 location in a 2-d plane, in [cm]
 s2 = [-0.8839 0];
 d = norm(s1-s2);    % distance between the two sensors
 distance = 1000;    % assuming a far field model
