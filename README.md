@@ -6,7 +6,11 @@ This repostory is focusing on sparse array (a small number of receivers) doa est
 The algorithms will be introduced and explained with codes as following:
 
 1 Search-Based AOA Estimation
+
     “Angle-of-arrival-based gesture recognition using ultrasonic multi-frequency signals”
+    
 2 Accelerated Algorithm using Random Ferns
+
     “Fast Phase-difference-based DOA Estimation Using Ranfom Ferns”
+    
 3 to be continued...
