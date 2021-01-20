@@ -15,4 +15,8 @@ The algorithms will be introduced and explained with codes as following:
     
 3 PDP algorithm (Phase-difference projection)
 
-    Prepare for ICASSP 2019.
+    Eusipco 2019: "Realtime 2-D DOA Estimation using Phase-Difference Projection (PDP)"
+    
+4 PDP for Non-Uniform Linear Arrays
+
+    Submitted to <IEEE Wireless Communications Letters>
