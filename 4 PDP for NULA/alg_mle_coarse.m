@@ -1,4 +1,4 @@
-function output = alg_mle(estR, S_lambda, theta_b, resolution)
+function output = alg_mle_coarse(estR, S_lambda, theta_b, resolution)
 % refine into 0.0001;
     Nr = length(S_lambda);
     angle_all = -theta_b:resolution:theta_b;

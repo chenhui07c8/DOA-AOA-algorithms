@@ -39,7 +39,7 @@ function [output] = alg_projection_constrain_mirror(target, P, U, freq, d, theta
 %         real_target = d/norm(d)*dis_to_pro + U(I(1),:) + P(I(1),:); 
 %         output = real(asin(real_target(1)*v/2/pi/freq/d(1))*180/pi);
 
-        % constrained PDP
+        % constrained PDP within the candidate area
         for ind = 1:length(I)
             dis_to_pro = d*target'/norm(d);
             real_target = d/norm(d)*dis_to_pro + U(I(ind),:) + P(I(ind),:);
@@ -50,7 +50,7 @@ function [output] = alg_projection_constrain_mirror(target, P, U, freq, d, theta
         end
         output = real(asin(real_target(1)*v/2/pi/freq/d(1))*180/pi);
         
-        % mirrored PDP
+        % mirrored PDP to remove outliers
         Lmin_doa = 0.5;
         for mirror_ind = 1:length(target)
             mirror = 0;
