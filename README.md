@@ -1,7 +1,7 @@
 # DOA-AOA-algorithms
 Algorithms to estimate the Direction-of-Arrival of the target signal
 
-This repostory is focusing on sparse array (a small number of receivers) doa estimation. Some of the algorithms are designed for one-dimension direction estimation. However, 1-d search can be easily extended into 2-d search by using another non parallel pair of sensor. Thus, the target direction vector in a 3-d can be obtained because the third angle info is dependent on the first two.
+This repostory is focusing on sparse array (a small number of receivers) DOA estimation. Some of the algorithms are designed for one-dimension direction estimation. However, 1D search can be easily extended into 2D search by using another non parallel pair of sensor. Thus, the target 3D direction vector can be obtained because the third angle info is dependent on the first two.
 
 The algorithms will be introduced and explained with codes as following:
 
@@ -16,7 +16,8 @@ The algorithms will be introduced and explained with codes as following:
 3 PDP algorithm (Phase-difference projection)
 
     Eusipco 2019: "Realtime 2-D DOA Estimation using Phase-Difference Projection (PDP)"
+    IEEE transactions on Instrumentation and Measurement 2020: "Air writing via receiver array-based ultrasonic source localization"
     
 4 PDP for Non-Uniform Linear Arrays
 
-    Submitted to <IEEE Wireless Communications Letters>
+    IEEE Wireless Communications Letters 2021: "DOA Estimation with Non-Uniform Linear Arrays: A Phase-Difference Projection Approach"
