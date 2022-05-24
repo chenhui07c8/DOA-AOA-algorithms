@@ -9,7 +9,7 @@ The algorithms will be introduced and explained with codes as following:
 &emsp; “Angle-of-arrival-based gesture recognition using ultrasonic multi-frequency signals,” Eusipco, 2017. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8081160)
     
 2 Accelerated Algorithm using Random Ferns\
-&emsp; “Fast Phase-difference-based DOA Estimation Using Ranfom Ferns,” GlobalSIP, 2018. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8646676)\
+&emsp; “Fast Phase-difference-based DOA Estimation Using Ranfom Ferns,” GlobalSIP, 2018. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8646676)
     
 3 PDP algorithm (Phase-difference projection, multi-carrier)\
 &emsp; "Realtime 2-D DOA Estimation using Phase-Difference Projection (PDP)," Eusipco 2019. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8902804)
