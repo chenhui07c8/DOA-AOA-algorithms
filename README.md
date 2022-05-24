@@ -5,13 +5,13 @@ This repostory is focusing on sparse array (a small number of receivers) DOA est
 
 The algorithms will be introduced and explained with codes as following:
 
-1 Search-Based AOA Estimation\
-$~$-Eusipco 2017: “Angle-of-arrival-based gesture recognition using ultrasonic multi-frequency signals” [Paper]
+*1 Search-Based AOA Estimation\
+-Eusipco 2017: “Angle-of-arrival-based gesture recognition using ultrasonic multi-frequency signals” [Paper]
     
-2 Accelerated Algorithm using Random Ferns\
+*2 Accelerated Algorithm using Random Ferns\
 -GlobalSIP 2018: “Fast Phase-difference-based DOA Estimation Using Ranfom Ferns”\
     
-3 PDP algorithm (Phase-difference projection)\
+*3 PDP algorithm (Phase-difference projection)\
 -Eusipco 2019: "Realtime 2-D DOA Estimation using Phase-Difference Projection (PDP)"
 -IEEE transactions on Instrumentation and Measurement 2020: "Air writing via receiver array-based ultrasonic source localization"
     
