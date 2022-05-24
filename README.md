@@ -6,17 +6,17 @@ This repostory is focusing on sparse array (a small number of receivers) DOA est
 The algorithms will be introduced and explained with codes as following:
 
 1 Search-Based AOA Estimation\
-&ensp; -Eusipco 2017: “Angle-of-arrival-based gesture recognition using ultrasonic multi-frequency signals” [Paper]
+&emsp; “Angle-of-arrival-based gesture recognition using ultrasonic multi-frequency signals,” Eusipco, 2017. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8081160)
     
-*2 Accelerated Algorithm using Random Ferns\
--GlobalSIP 2018: “Fast Phase-difference-based DOA Estimation Using Ranfom Ferns”\
+2 Accelerated Algorithm using Random Ferns\
+&emsp; “Fast Phase-difference-based DOA Estimation Using Ranfom Ferns,” GlobalSIP, 2018. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8646676)\
     
-*3 PDP algorithm (Phase-difference projection)\
--Eusipco 2019: "Realtime 2-D DOA Estimation using Phase-Difference Projection (PDP)"
--IEEE transactions on Instrumentation and Measurement 2020: "Air writing via receiver array-based ultrasonic source localization"
+3 PDP algorithm (Phase-difference projection, multi-carrier)\
+&emsp; "Realtime 2-D DOA Estimation using Phase-Difference Projection (PDP)," Eusipco 2019. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8902804)
+&emsp; "Air writing via receiver array-based ultrasonic source localization," IEEE Trans. Trans. Instrum. Meas., 2020. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9082625)
     
 4 PDP for Non-Uniform Linear Arrays
--IEEE Wireless Communications Letters 2021: "DOA Estimation with Non-Uniform Linear Arrays: A Phase-Difference Projection Approach"
+&emsp; "DOA Estimation with Non-Uniform Linear Arrays: A Phase-Difference Projection Approach," IEEE Wireless Commun. Lett., 2021. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9506874)
 
 
 # 5G/6G (mmWave/THz) Radio Localization
