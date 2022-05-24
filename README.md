@@ -18,6 +18,6 @@ The algorithms will be introduced and explained with codes as following:
 4 PDP for Non-Uniform Linear Arrays
 &emsp; "DOA Estimation with Non-Uniform Linear Arrays: A Phase-Difference Projection Approach," IEEE Wireless Commun. Lett., 2021. [[Paper]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9506874)
 
-
-# 5G/6G (mmWave/THz) Radio Localization
+# Other useful repositories:
+## 5G/6G (mmWave/THz) Radio Localization
 The Repository contains the code for 5G/6G (mmWave/THz) radio localization, and sensing can be found in [Radio Localization Code](https://github.com/chenhui07c8/Radio_Localization).
