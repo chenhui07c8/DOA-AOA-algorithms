@@ -47,8 +47,8 @@ end
 
 figure;plot(phase_wrapped(:,1),phase_wrapped(:,2),'.','MarkerSize',10);
 set(gca,'FontSize',16)
-xlabel('\psi_1(\theta) [Rad]')
-ylabel('\psi_2(\theta) [Rad]')
+xlabel('{$\psi_1(\theta)$ [Rad]}','Interpreter','Latex');
+ylabel('{$\psi_2(\theta)$ [Rad]}','Interpreter','Latex');
 set(gcf,'position',[100,100,420*1.2,400*1.2])
 axis([-4 4 -4 4])
 % projections
@@ -59,10 +59,10 @@ hold on;
 plot(P(:,1),P(:,2),'sr','MarkerSize',8,'MarkerFaceColor','r');
 character = [];
 for i = 1:length(P(:,1))
-    character = [character; ['p_' num2str(i)]]
+    character = [character; ['{$' '\mathbf{p}_' num2str(i) '$}']]
 end
 character = cellstr(character);
-text(P(:,1)-0.07,P(:,2)-0.4,character,'FontSize',14,'Color','r');
+text(P(:,1)-0.07,P(:,2)-0.3,character,'FontSize',16,'Color','r', 'Interpreter', 'Latex');
 
 % boundary
 hold on;
@@ -76,31 +76,46 @@ plot([-pi -pi],[pi -pi],'--b','LineWidth',1);
 highlight = [-41 -12 13 42 -90];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)-0.2,phase_wrapped(highlight+thetam+1,2)-0.4,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)-0.2,phase_wrapped(highlight+thetam+1,2)-0.4,character,'FontSize',16, 'Interpreter', 'Latex');
 set(gca,'FontSize',14)
 
 highlight = -[-41 -12 13 42 -90];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)-0.2,phase_wrapped(highlight+thetam+1,2)+0.4,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)-0.2,phase_wrapped(highlight+thetam+1,2)+0.4,character,'FontSize',16, 'Interpreter', 'Latex');
 set(gca,'FontSize',14)
 
 highlight = [0];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)+0.2,phase_wrapped(highlight+thetam+1,2)+0.1,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)+0.2,phase_wrapped(highlight+thetam+1,2)+0.1,character,'FontSize',16, 'Interpreter', 'Latex');
 set(gca,'FontSize',14)
 
 highlight = [-57 -17 16 56];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)+0.17,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)+0.17,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',16, 'Interpreter', 'Latex');
 set(gca,'FontSize',14)
 
 highlight = -[-57 -17 16 56];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)-0.77,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)-0.77,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',16, 'Interpreter', 'Latex');
 set(gca,'FontSize',14)
 
 % print -dpng -r600 fig-3-1.png
@@ -148,8 +163,8 @@ end
 
 figure;plot(phase_wrapped(:,1),phase_wrapped(:,2),'.','MarkerSize',10);
 set(gca,'FontSize',16)
-xlabel('\psi_1(\theta) [Rad]')
-ylabel('\psi_2(\theta) [Rad]')
+xlabel('{$\psi_1(\theta)$ [Rad]}','Interpreter','Latex');
+ylabel('{$\psi_2(\theta)$ [Rad]}','Interpreter','Latex');
 set(gcf,'position',[100,100,420*1.2,400*1.2])
 axis([-4 4 -4 4])
 % projections
@@ -161,14 +176,16 @@ plot(P(:,1),P(:,2),'sr','MarkerSize',8,'MarkerFaceColor','r');
 % character = [];
 
 for i = 3:7
-    character = cellstr(['p_' num2str(i)]);
-    text(P(i,1)-0.15,P(i,2)-0.4,character,'FontSize',14,'Color','r');
+    character = cellstr(['{$' '\mathbf{p}_' num2str(i) '$}']);
+    text(P(i,1)-0.15,P(i,2)-0.4,character,'FontSize',16,'Color','r','Interpreter','Latex');
 end
 
 for i = 1:2
-    character = cellstr(['p_' num2str(i)]);
-    text(P(i,1)-0.3,P(i,2)+0.42,character,'FontSize',14,'Color','r');
+    character = cellstr(['{$' '\mathbf{p}_' num2str(i) '$}']);
+    text(P(i,1)-0.3,P(i,2)+0.42,character,'FontSize',16,'Color','r','Interpreter','Latex');
 end
+
+
 % boundary
 hold on;
 plot([-pi pi],[-pi -pi],'--b','LineWidth',1);
@@ -181,33 +198,48 @@ plot([-pi -pi],[pi -pi],'--b','LineWidth',1);
 highlight = [0];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)+0.2,phase_wrapped(highlight+thetam+1,2)+0.1,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)+0.2,phase_wrapped(highlight+thetam+1,2)+0.1,character,'FontSize',16,'Interpreter','Latex');
 set(gca,'FontSize',14)
 
 
 highlight = -[-18 17 -65 -64];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)-0.2,phase_wrapped(highlight+thetam+1,2)-0.4,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)-0.2,phase_wrapped(highlight+thetam+1,2)-0.4,character,'FontSize',16,'Interpreter','Latex');
 set(gca,'FontSize',14)
 % 
 highlight = [-18 17 -65 -64];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)-0.35,phase_wrapped(highlight+thetam+1,2)+0.4,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)-0.35,phase_wrapped(highlight+thetam+1,2)+0.4,character,'FontSize',16,'Interpreter','Latex');
 set(gca,'FontSize',14)
 
 
 highlight = [25 -26];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)+0.17,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)+0.17,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',16,'Interpreter','Latex');
 set(gca,'FontSize',14)
 
 highlight = -[25 -26];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)-0.77,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',14);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)-0.82,phase_wrapped(highlight+thetam+1,2)+0.15,character,'FontSize',16,'Interpreter','Latex');
 set(gca,'FontSize',14)
 
 % print -dpng -r600 fig-3-2.png

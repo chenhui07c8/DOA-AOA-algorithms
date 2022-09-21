@@ -18,9 +18,9 @@ hold on;semilogy(snrdB(plot_ind),sqrt(rvec6(plot_ind)),'>m-.','LineWidth',linewi
 hold on; semilogy(snrdB(plot_ind), sqrt(crlb(plot_ind)),'--k','LineWidth',2);
 hold on;semilogy(snrdB(plot_ind),sqrt(rvec1(plot_ind)),'-ob','LineWidth',linewidth,'MarkerSize',markersize);
 
-grid on;set(gca,'FontSize',12);
-xlabel('SNR [dB]');
-ylabel('RMSE [Deg]');
+grid on;set(gca,'FontSize',13);
+xlabel('{SNR [dB]}','Interpreter','Latex');
+ylabel('{RMSE [Deg]}','Interpreter','Latex');
 
 % set(gca,'FontSize',12)
 
@@ -74,8 +74,8 @@ set(gca,'yticklabel',{[]})
 % set(gcf,'position',[100,100,420*1.2,400*1.2])
 % print -dpng -r600 sim1-3sensors.png
 
-legend('PDP','MUSIC (0.01^\circ)','MLE (0.01^\circ)','2Q-order','Two-step','EM-ESPRIT (2^\circ)','CRLB');
-grid on; set(gca,'FontSize',12)
+legend('PDP','MUSIC ($0.01^\circ$)','MLE ($0.01^\circ$)','2Q-order','Two-step','EM-ESPRIT ($2^\circ$)','CRLB','Interpreter','Latex');
+grid on; set(gca,'FontSize',13)
 
 set(gcf,'position', [100,100,350*1.5,350])
 
@@ -96,9 +96,10 @@ hold on;semilogy(snrdB(plot_ind), sqrt(crlb(plot_ind)),'--k','LineWidth',2);
 hold on;semilogy(snrdB(plot_ind),sqrt(rvec1(plot_ind)),'-ob','LineWidth',linewidth,'MarkerSize',markersize);
 
 % axis([0 60 10^-7 10^4])
-xlabel('SNR [dB]');
-ylabel('RMSE [Deg]');
-grid on;set(gca,'FontSize',12);
+xlabel('{SNR [dB]}','Interpreter','Latex');
+ylabel('{RMSE [Deg]}','Interpreter','Latex');
+
+grid on;set(gca,'FontSize',13);
 % set(gcf,'position',[100,100,420*1.2,400*1.2])
 
 % Zoomed plot ****************************************
@@ -147,8 +148,8 @@ set(gca,'ytick',[])
 set(gca,'xticklabel',{[]})
 set(gca,'yticklabel',{[]})
 
-legend('PDP','MUSIC (0.01^\circ)','MLE (0.01^\circ)','2Q-order','Two-step','EM-ESPRIT (2^\circ)','CRLB');
-grid on; set(gca,'FontSize',12);
+legend('PDP','MUSIC ($0.01^\circ$)','MLE ($0.01^\circ$)','2Q-order','Two-step','EM-ESPRIT ($2^\circ$)','CRLB','Interpreter','Latex');
+grid on; set(gca,'FontSize',13);
 
 set(gcf,'position', [100,100,350*1.5,350])
 
@@ -171,9 +172,10 @@ hold on;semilogy(snrdB(plot_ind), sqrt(crlb(plot_ind)),'--k','LineWidth',2);
 hold on;semilogy(snrdB(plot_ind),sqrt(rvec1(plot_ind)),'-ob','LineWidth',linewidth,'MarkerSize',markersize);
 
 % axis([0 60 10^-7 10^4])
-xlabel('SNR [dB]');
-ylabel('RMSE [Deg]');
-grid on;set(gca,'FontSize',12);
+xlabel('{SNR [dB]}','Interpreter','Latex');
+ylabel('{RMSE [Deg]}','Interpreter','Latex');
+
+grid on;set(gca,'FontSize',13);
 % set(gcf,'position',[100,100,420*1.2,400*1.2])
 
 % Zoomed plot ****************************************
@@ -223,25 +225,14 @@ set(gca,'xticklabel',{[]})
 set(gca,'yticklabel',{[]})
 
 
-legend('PDP','MUSIC (0.01^\circ)','MLE (0.01^\circ)','2Q-order','Two-step','EM-ESPRIT (2^\circ)','CRLB');
-grid on; set(gca,'FontSize',12)
+legend('PDP','MUSIC ($0.01^\circ$)','MLE ($0.01^\circ$)','2Q-order','Two-step','EM-ESPRIT ($2^\circ$)','CRLB','Interpreter','Latex');
+grid on; set(gca,'FontSize',13)
 
 set(gcf,'position', [100,100,350*1.5,350])
 
 % print -dpng -r600 sim1-8sensors.png
 
 %% Fig 4
-% close all
-% load fig_8_4_data_3.mat;
-% axis_vec = [5 30 10^-0.8 10^1.5];
-
-% load fig_8_4_data_5.mat;
-% axis_vec = [5 30 10^-1.4 10^1.5];
-% 
-% load fig_8_4_data_8.mat;
-% axis_vec = [0 30 10^-1.8 10^1.8];
-
-
 % close all
 % load fig_8_4_data_3_res2.mat;
 % axis_vec = [5 30 10^-0.8 10^1.5];
@@ -267,10 +258,10 @@ hold on; semilogy(snrdB(plot_ind), sqrt(crlb(plot_ind)),'--k','LineWidth',2);
 
 hold on;semilogy(snrdB(plot_ind),sqrt(rvec1(plot_ind)),'-ob','LineWidth',linewidth,'MarkerSize',markersize);
 
-xlabel('SNR [dB]');
-ylabel('RMSE [Deg]');
-legend('PDP','MUSIC (0.01^\circ)','MLE (0.01^\circ)','MLE (0.5^\circ)','Two-step','EM-ESPRIT (2^\circ)','CRLB');
-grid on; set(gca,'FontSize',12)
+xlabel('{SNR [dB]}','Interpreter','Latex');
+ylabel('{RMSE [Deg]}','Interpreter','Latex');
+legend('PDP','MUSIC ($0.01^\circ$)','MLE ($0.01^\circ$)','MLE ($0.5^\circ$)','Two-step','EM-ESPRIT ($2^\circ$)','CRLB','Interpreter','Latex');
+grid on; set(gca,'FontSize',13)
 
 axis(axis_vec)
 

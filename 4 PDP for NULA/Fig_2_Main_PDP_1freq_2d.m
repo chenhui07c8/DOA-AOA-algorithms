@@ -50,8 +50,8 @@ hold on; plot(phase_wrapped((91+26):(91+90),1),phase_wrapped((91+26):(91+90),2),
 hold on; plot(phase_wrapped((91-90):(91-26),1),phase_wrapped((91-90):(91-26),2),'c.','MarkerSize',10);
 
 set(gca,'FontSize',16)
-xlabel('\psi_1(\theta) [Rad]')
-ylabel('\psi_2(\theta) [Rad]')
+xlabel('{$\psi_1(\theta)$ [Rad]}','Interpreter','Latex');
+ylabel('{$\psi_2(\theta)$ [Rad]}','Interpreter','Latex');
 set(gcf,'position',[100,100,420*1.2,400*1.2])
 axis([-4 4 -3.3 3.3])
 
@@ -63,13 +63,13 @@ hold on;
 plot(P(:,1),P(:,2),'sr','MarkerSize',8,'MarkerFaceColor','r');
 
 character = cell(1,3);
-character{1} = {'p_1'};
-character{2} = {'p_3'};
-character{3} = {'p_5'};
+character{1} = {'{$\mathbf{p}_1$}'};
+character{2} = {'{$\mathbf{p}_3$}'};
+character{3} = {'{$\mathbf{p}_5$}'};
 % character{5} = {'p_5'};
-text(P([1 3 5],1)+0.25,P([1 3 5],2)+0.2,character,'FontSize',16,'Color','r');
-text(P(2,1)-0.05,P(2,2)-0.4,'p_2','FontSize',16,'Color','r');
-text(P(4,1)+0.15,P(4,2)+0.4,'p_4','FontSize',16,'Color','r');
+text(P([1 3 5],1)+0.25,P([1 3 5],2)+0.2,character,'FontSize',16,'Color','r','Interpreter','Latex');
+text(P(2,1)-0.05,P(2,2)-0.4,'{$\mathbf{p}_2$}','FontSize',16,'Color','r','Interpreter','Latex');
+text(P(4,1)+0.15,P(4,2)+0.4,'{$\mathbf{p}_4$}','FontSize',16,'Color','r','Interpreter','Latex');
 
 % boundaryc
 hold on;
@@ -83,24 +83,35 @@ highlight = [-90 -25 -26 26 25 90];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 % character = cellstr([num2str(highlight')]);
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
 % s1 = num2str(highlight');
 % s2 = '^\circ';
 % s = strcat(s1,s2)
 % character = {{'-90^\circ'}, {'-25^\circ'}, {'-26^\circ'}, {'26^\circ'}, {'25^\circ'}, {'90^\circ'}}
-text(phase_wrapped(highlight+thetam+1,1)+0.1,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',16);
+text(phase_wrapped(highlight+thetam+1,1)+0.1,phase_wrapped(highlight+thetam+1,2)-0.1,character,'FontSize',16,'Interpreter','Latex');
 
 highlight = [-20 0 21];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 % character = cellstr(num2str(highlight'));
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)-0.20,phase_wrapped(highlight+thetam+1,2)-0.35,character,'FontSize',16);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)-0.20,phase_wrapped(highlight+thetam+1,2)-0.35,character,'FontSize',16,'Interpreter','Latex');
+
 set(gca,'FontSize',16)
 
 highlight = [-21 20];
 hold on;plot(phase_wrapped(highlight+thetam+1,1),phase_wrapped(highlight+thetam+1,2),'.r','MarkerSize',16);
 % character = cellstr(num2str(highlight'));
 character = cellstr(strcat([num2str(highlight')], '^\circ'));
-text(phase_wrapped(highlight+thetam+1,1)+0.0,phase_wrapped(highlight+thetam+1,2)+0.35,character,'FontSize',16);
+for i = 1:length(character)
+    character{i} = ['{$' character{i} '$}'];
+end
+text(phase_wrapped(highlight+thetam+1,1)+0.0,phase_wrapped(highlight+thetam+1,2)+0.35,character,'FontSize',16,'Interpreter','Latex');
+
 set(gca,'FontSize',16)
 % an example of phase unwrapping
 % ex1 = phase_wrapped(22+thetam+1,:)+[-0.3 0.24];
@@ -128,6 +139,7 @@ axis([-4 4 -4 4])
 set(gcf, 'Position', [10 10 500 450])
 
 
-
+% xlabel('{Number of Antennas/SAs at BS $N_\mathrm{B}$}','Interpreter','Latex')
+% 
 
 % print -dpng -r600 fig_2.png
